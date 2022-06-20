@@ -148,10 +148,11 @@ class App(object):
     def aide(self):
         'Menu : A propops'
         apropos = Tk()
-        texte1 = "Logiciel de transfère de fichiers se connectant à un serveur socket. " 
-        texte2 = "Vous pouvez ajouter des répertoires locaux en les ajoutant via le menu 'Fichier'. "
-        texte3 = "De plus vous pouvez uploader un répertoire entier mais ne pouvez en télécharger un."
-        msg = Message(apropos, text = texte1+texte2+texte3, width=550)
+        texte = ('Logiciel de transfère de fichiers se connectant à un serveur socket.\n'
+        'Vous pouvez ajouter des répertoires locaux en les ajoutant via le menu Fichier.\n'
+        'De plus vous pouvez uploader un répertoire entier mais ne pouvez en télécharger un.')
+        apropos.title('Transfère de fichiers - A propos')
+        msg = Message(apropos, text = texte, width=550)
         msg.config(font=("",12))
         msg.grid(row=0, column=0)
         apropos.mainloop()
